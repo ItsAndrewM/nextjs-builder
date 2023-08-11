@@ -20,7 +20,7 @@ const CollectionPreview: FC<Props> = ({
   collection: initialCollection,
   productGridOptions,
   renderSeo,
-}) => {
+}): JSX.Element => {
   const [collection, setCollection] = useState(initialCollection)
   const [loading, setLoading] = useState(false)
 
@@ -41,12 +41,16 @@ const CollectionPreview: FC<Props> = ({
   }, [collection])
 
   if (!collection || typeof collection === 'string' || loading) {
-    return <LoadingDots />
+    return (
+      <React.Fragment>
+        <LoadingDots />
+      </React.Fragment>
+    )
   }
 
   const { title, description, products } = collection
   return (
-    <>
+    <React.Fragment>
       <Themed.div
         sx={{ display: 'flex', flexDirection: 'column' }}
         key={collection.id}
@@ -72,7 +76,7 @@ const CollectionPreview: FC<Props> = ({
           <ProductGrid {...productGridOptions} products={products} />
         </Themed.div>
       </Themed.div>
-    </>
+    </React.Fragment>
   )
 }
 
