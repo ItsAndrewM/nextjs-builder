@@ -1,5 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+/** @jsxFrag jsx */
 import React, { FC, useState, useEffect } from 'react'
 import { NextSeo } from 'next-seo'
 import { Themed, jsx } from 'theme-ui'
@@ -42,15 +43,15 @@ const CollectionPreview: FC<Props> = ({
 
   if (!collection || typeof collection === 'string' || loading) {
     return (
-      <React.Fragment>
+      <>
         <LoadingDots />
-      </React.Fragment>
+      </>
     )
   }
 
   const { title, description, products } = collection
   return (
-    <React.Fragment>
+    <>
       <Themed.div
         sx={{ display: 'flex', flexDirection: 'column' }}
         key={collection.id}
@@ -76,7 +77,7 @@ const CollectionPreview: FC<Props> = ({
           <ProductGrid {...productGridOptions} products={products} />
         </Themed.div>
       </Themed.div>
-    </React.Fragment>
+    </>
   )
 }
 
