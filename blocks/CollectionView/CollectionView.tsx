@@ -41,11 +41,7 @@ const CollectionPreview: FC<Props> = ({
   }, [collection])
 
   if (!collection || typeof collection === 'string' || loading) {
-    return (
-      <>
-        <LoadingDots />
-      </>
-    )
+    return <LoadingDots />
   }
 
   const { title, description, products } = collection
