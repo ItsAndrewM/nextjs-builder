@@ -43,7 +43,6 @@ const CollectionPreview: FC<Props> = ({
   if (!collection || typeof collection === 'string' || loading) {
     return (
       <>
-        {/* @ts-expect-error Server Component */}
         <LoadingDots />
       </>
     )
@@ -51,32 +50,33 @@ const CollectionPreview: FC<Props> = ({
 
   const { title, description, products } = collection
   return (
-    <Themed.div
-      sx={{ display: 'flex', flexDirection: 'column' }}
-      key={collection.id}
-    >
-      {renderSeo && (
-        <NextSeo
-          title={collection.title}
-          description={collection.description}
-          openGraph={{
-            type: 'website',
-            title,
-            description,
-          }}
-        />
-      )}
-      <div sx={{ display: 'flex', flexDirection: 'column' }}>
-        <span sx={{ mt: 0, mb: 2 }}>
-          <Themed.h1>{collection.title}</Themed.h1>
-        </span>
-        <div dangerouslySetInnerHTML={{ __html: collection.description! }} />
-      </div>
-      <Themed.div sx={{ p: 5 }}>
-        {/* @ts-expect-error Server Component */}
-        <ProductGrid {...productGridOptions} products={products} />
+    <>
+      <Themed.div
+        sx={{ display: 'flex', flexDirection: 'column' }}
+        key={collection.id}
+      >
+        {renderSeo && (
+          <NextSeo
+            title={collection.title}
+            description={collection.description}
+            openGraph={{
+              type: 'website',
+              title,
+              description,
+            }}
+          />
+        )}
+        <div sx={{ display: 'flex', flexDirection: 'column' }}>
+          <span sx={{ mt: 0, mb: 2 }}>
+            <Themed.h1>{collection.title}</Themed.h1>
+          </span>
+          <div dangerouslySetInnerHTML={{ __html: collection.description! }} />
+        </div>
+        <Themed.div sx={{ p: 5 }}>
+          <ProductGrid {...productGridOptions} products={products} />
+        </Themed.div>
       </Themed.div>
-    </Themed.div>
+    </>
   )
 }
 
