@@ -73,6 +73,7 @@ const CollectionPreview: FC<Props> = ({
         <div dangerouslySetInnerHTML={{ __html: collection.description! }} />
       </div>
       <Themed.div sx={{ p: 5 }}>
+        {/* @ts-expect-error Server Component */}
         <ProductGrid {...productGridOptions} products={products} />
       </Themed.div>
     </Themed.div>
