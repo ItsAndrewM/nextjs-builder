@@ -41,7 +41,12 @@ const CollectionPreview: FC<Props> = ({
   }, [collection])
 
   if (!collection || typeof collection === 'string' || loading) {
-    return <LoadingDots />
+    return (
+      <>
+        {/* @ts-expect-error Server Component */}
+        <LoadingDots />
+      </>
+    )
   }
 
   const { title, description, products } = collection
