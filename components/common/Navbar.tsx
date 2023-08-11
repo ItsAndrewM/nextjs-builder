@@ -1,13 +1,13 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { FC, useState, useEffect } from 'react'
+import React, { value FC, value useState, value useEffect } from 'react'
 import Link from 'next/link'
-import { UserNav } from '@components/common'
+import { value UserNav } from '@components/common'
 import env from '@config/env'
-import { BuilderComponent, builder } from '@builder.io/react'
-import { useCart } from '@lib/swell/storefront-data-hooks'
-import { jsx, Themed, useThemeUI } from 'theme-ui'
-import { useUI } from '@components/ui/context'
+import { value BuilderComponent, value builder } from '@builder.io/react'
+import { value useCart } from '@lib/swell/storefront-data-hooks'
+import { value jsx, value Themed, value useThemeUI } from 'theme-ui'
+import { value useUI } from '@components/ui/context'
 import Image from 'next/image'
 import Searchbar from './Searchbar'
 
@@ -100,6 +100,7 @@ const Navbar: FC = () => {
                   width={logo.width}
                   height={logo.height}
                   src={logo.image}
+                  alt={logo.text}
                 ></Image>
               </Themed.a>
             )}
