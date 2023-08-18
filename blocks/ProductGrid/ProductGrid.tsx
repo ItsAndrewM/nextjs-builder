@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { FC, useEffect, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { LoadingDots } from '@components/ui'
 import { Grid } from '@theme-ui/components'
 import { ProductCardProps } from '@components/common/ProductCard'
@@ -74,7 +74,7 @@ export const ProductGrid: FC<ProductGridProps> = ({
   }, [collection])
 
   if (loading) {
-    return <LoadingDots />
+    return <React.Fragment><LoadingDots /></React.Fragment>
   }
   const ProductComponent: any = process.env.IS_DEMO
     ? ProductCardDemo
