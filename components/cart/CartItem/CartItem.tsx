@@ -112,7 +112,7 @@ const CartItem = ({
         </Themed.div>
         <Themed.ul sx={{ mt: 2, mb: 0, padding: 0, listStyle: 'none' }}>
           <li>
-            <div sx={{ display: 'flex', justifyItems: 'center' }}>
+            <div style={{ display: 'flex', justifyItems: 'center' }}>
               <IconButton onClick={() => increaseQuantity(-1)}>
                 <Minus width={18} height={18} />
               </IconButton>
