@@ -43,7 +43,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       }}
     >
       <Link href={`/product/${handle}/`}>
-        <div sx={{ flexGrow: 1 }}>
+        <div style={{ flexGrow: 1 }}>
           <ImageCarousel
             currentSlide={product.images ? product.images.length - 1 : 0}
             width={imgWidth}
@@ -60,7 +60,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             }
           />
         </div>
-        <div sx={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center' }}>
           <Themed.h2 sx={{ mt: 4, mb: 0, fontSize: 14 }}>
             {product.name}
           </Themed.h2>

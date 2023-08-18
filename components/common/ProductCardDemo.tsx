@@ -51,7 +51,7 @@ const ProductCardDemo: React.FC<ProductCardProps> = ({
       onMouseOver={() => setShowAlternate(true)}
     >
       <Link href={`/product/${handle}/`}>
-        <div sx={{ flexGrow: 1 }}>
+        <div style={{ flexGrow: 1 }}>
           {alternateImage && (
             <div
               sx={{ display: showAlternate && canToggle ? 'block' : 'none' }}
@@ -90,7 +90,7 @@ const ProductCardDemo: React.FC<ProductCardProps> = ({
             />
           </div>
         </div>
-        <div sx={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center' }}>
           <Themed.h2 sx={{ mt: 4, mb: 0, fontSize: 14 }}>
             {product.title}
           </Themed.h2>

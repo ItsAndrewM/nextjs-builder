@@ -55,7 +55,7 @@ const ProductBox: React.FC<Props> = ({
       )}
       <Grid gap={4} columns={[1, 2]}>
         <div
-          sx={{
+          style={{
             border: '1px solid gray',
             padding: 2,
             marginBottom: 2,
