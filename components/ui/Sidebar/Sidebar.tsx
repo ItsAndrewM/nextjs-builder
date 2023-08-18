@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Close, Themed } from 'theme-ui'
+import { jsx, Close } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { useResponsiveValue } from '@theme-ui/match-media'
 import { FC } from 'react'
 import { BaseModal, ModalCloseTarget } from 'react-spring-modal'

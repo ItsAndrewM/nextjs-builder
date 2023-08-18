@@ -1,3 +1,4 @@
 {
-    "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "css.customData": [".vscode/tailwind.json"]
 }

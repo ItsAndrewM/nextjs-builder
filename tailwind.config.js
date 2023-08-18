@@ -59,5 +59,17 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/ui')],
+  plugins: [
+    // require('@tailwindcss/typography'),
+    // require('@tailwindcss/aspect-ratio'),
+    // require('@tailwindcss/forms'),
+    // require('tailwindcss/nesting')(require('postcss-nesting')),
+    // require('autoprefixer'),
+    // require('tailwindcss'),
+    // require('postcss-import')
+    require('postcss-import'),
+    require('@tailwindcss/nesting')(require('postcss-nesting')),
+    require('autoprefixer'),
+    require('tailwindcss'),
+  ],
 }

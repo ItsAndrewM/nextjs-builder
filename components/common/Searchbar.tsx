@@ -4,7 +4,8 @@ import React, { FC, useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter } from 'next/router'
 import { LoadingDots } from '@components/ui'
 import { ProductGrid } from 'blocks/ProductGrid/ProductGrid'
-import { Button, Themed, jsx, Input, Label } from 'theme-ui'
+import { Button, jsx, Input, Label } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { searchProducts } from '@lib/swell/storefront-data-hooks/src/api/operations-swell'
 import { ExpandModal } from 'react-spring-modal'
 import { throttle } from 'lodash'
@@ -90,7 +91,7 @@ const SearchModalContent = (props: {
   onSearch: (term: string) => any
 }) => {
   const [search, setSearch] = useState(
-    props.initialSearch && String(props.initialSearch)
+    props.initialSearch && String(props.initialSearch),
   )
   const [products, setProducts] = useState([] as any[])
   const [loading, setLoading] = useState(false)
@@ -101,7 +102,7 @@ const SearchModalContent = (props: {
       String(searchTerm),
       // TODO: pagination
       20,
-      0
+      0,
     )
     setSearch(searchTerm)
     setProducts(results)

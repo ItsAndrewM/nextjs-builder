@@ -3,7 +3,8 @@
 /** @jsxFrag jsx */
 import React, { FC, useState, useEffect } from 'react'
 import { NextSeo } from 'next-seo'
-import { Themed, jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
+// import { jsx } from '@theme-ui/core'
 import { LoadingDots } from '@components/ui'
 import builderConfig from '@config/builder'
 import { ProductGrid, ProductGridProps } from '../ProductGrid/ProductGrid'

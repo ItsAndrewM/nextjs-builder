@@ -1,7 +1,8 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import React from 'react'
-import { Themed, jsx, Text, Card, Grid, Divider, NavLink } from 'theme-ui'
+import { jsx, Text, Card, Grid, Divider, NavLink } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { FC, useEffect, useState } from 'react'
 import { Bag } from '@components/icons'
 import { useCart, useCheckoutUrl } from '@lib/swell/storefront-data-hooks'
@@ -67,7 +68,7 @@ const CartSidebarView: FC = () => {
             <CartItem
               key={item.id}
               item={item}
-              currencyCode={ cart?.currency ?? 'USD'}
+              currencyCode={cart?.currency ?? 'USD'}
             />
           ))}
           <Card sx={{ marginLeft: 'auto', minWidth: '10rem', paddingLeft: 5 }}>

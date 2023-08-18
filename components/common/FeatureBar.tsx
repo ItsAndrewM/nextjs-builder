@@ -1,7 +1,8 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import React, { useEffect, useState } from 'react'
-import { Themed, jsx } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { CenterModal, ModalTitle, ModalCloseTarget } from 'react-spring-modal'
 
 interface FeatureBarProps {

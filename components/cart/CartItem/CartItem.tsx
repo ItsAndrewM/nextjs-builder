@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { Themed, jsx, Grid, Button, Input, Text, IconButton } from 'theme-ui'
+import { jsx, Grid, Button, Input, Text, IconButton } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -83,7 +84,10 @@ const CartItem = ({
           width={130}
           unoptimized
           alt={item.product.meta_description}
-          src={(item.product.images && item.product.images[0].file?.url) ?? 'https://via.placeholder.com/1050x1050'}
+          src={
+            (item.product.images && item.product.images[0].file?.url) ??
+            'https://via.placeholder.com/1050x1050'
+          }
         />
       </div>
       <div>
@@ -102,10 +106,7 @@ const CartItem = ({
                 marginLeft: 'auto',
               }}
             >
-              {getPrice(
-                item.price,
-                currencyCode
-              )}
+              {getPrice(item.price, currencyCode)}
             </Text>
           </>
         </Themed.div>

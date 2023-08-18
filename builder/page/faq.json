@@ -49,11 +49,11 @@
                         "@type": "@builder.io/sdk:Element",
                         "@version": 2,
                         "bindings": {
-                          "_newProperty": ""
+                          "_newproperty": ""
                         },
                         "code": {
                           "bindings": {
-                            "_newProperty": ""
+                            "_newproperty": ""
                           }
                         },
                         "id": "builder-1faf485a92954699b857951c4d711223",
@@ -3753,7 +3753,7 @@
                 "activeTabStyle": {
                   "backgroundColor": "rgba(0, 0, 0, 1)",
                   "color": "rgba(255, 255, 255, 1)",
-                  "_newProperty": "",
+                  "_newproperty": "",
                   "borderRadius": "",
                   "borderStyle": "none",
                   "display": "flex"

@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Themed, AspectRatio } from 'theme-ui'
+import { jsx, AspectRatio } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import React from 'react'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
@@ -20,7 +21,7 @@ const ImageCarousel: React.FC<props> = ({
   ...imageProps
 }) => {
   return (
-    <AspectRatio ratio={Number(imageProps.height ) / Number(imageProps.width)}>
+    <AspectRatio ratio={Number(imageProps.height) / Number(imageProps.width)}>
       <UntilInteraction
         skeleton={<Image src={images[0].src} {...imageProps} />}
       >
