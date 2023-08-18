@@ -70,6 +70,7 @@
     "@types/node-fetch": "^2.6.4",
     "@types/qs": "^6.9.5",
     "@types/react-sticky": "^6.0.3",
+    "@types/theme-ui": "^0.6.0",
     "@types/traverse": "^0.6.32",
     "@vercel/fetch": "^7.0.0",
     "atob": "^2.1.2",
