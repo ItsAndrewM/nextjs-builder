@@ -74,7 +74,7 @@ export const ProductGrid: FC<ProductGridProps> = ({
   }, [collection])
 
   if (loading) {
-    return <JSX.Element><LoadingDots /></JSX.Element>
+    return <span><LoadingDots /></span>
   }
   const ProductComponent: any = process.env.IS_DEMO
     ? ProductCardDemo
