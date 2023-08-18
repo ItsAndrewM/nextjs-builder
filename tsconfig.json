@@ -20,6 +20,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": {
+      "@theme-ui/core/dist/react-jsx.d.ts": [".sink.d.ts"],
+      "@theme-ui/core": [".sink.d.ts"],
       "@lib/*": [
         "lib/*"
       ],
