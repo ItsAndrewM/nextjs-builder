@@ -68,8 +68,8 @@ const CollectionPreview: FC<Props> = ({
             }}
           />
         )}
-        <div sx={{ display: 'flex', flexDirection: 'column' }}>
-          <span sx={{ mt: 0, mb: 2 }}>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <span style={{ marginTop: 0, marginBottom: 2 }}>
             <Themed.h1>{collection.title}</Themed.h1>
           </span>
           <div dangerouslySetInnerHTML={{ __html: collection.description! }} />

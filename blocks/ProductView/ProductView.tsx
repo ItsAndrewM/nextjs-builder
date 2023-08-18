@@ -1,7 +1,8 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import React, { useMemo, useState, useEffect } from 'react'
-import { Themed, jsx } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { Grid, Button } from '@theme-ui/components'
 import OptionPicker from '@components/common/OptionPicker'
 import { NextSeo } from 'next-seo'
@@ -147,7 +148,7 @@ interface Selection extends OptionInput {
       <Grid gap={4} columns={[1, 2]}>
         <div>
           <div
-            sx={{
+            style={{
               border: '1px solid gray',
               padding: 2,
               marginBottom: 2,
@@ -170,8 +171,8 @@ interface Selection extends OptionInput {
             ></ImageCarousel>
           </div>
         </div>
-        <div sx={{ display: 'flex', flexDirection: 'column' }}>
-          <span sx={{ mt: 0, mb: 2 }}>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <span style={{ marginTop: 0, marginBottom: 2 }}>
             <Themed.h1>{title}</Themed.h1>
             <Themed.h4 aria-label="price" sx={{ mt: 0, mb: 2 }}>
               {getPrice(variant ? variant?.price : product.price, product.currency ?? 'USD')} 
