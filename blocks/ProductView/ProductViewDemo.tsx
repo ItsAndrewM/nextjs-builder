@@ -71,8 +71,8 @@ const ProductBox: React.FC<Props> = ({
           ></ImageCarousel>
         </div>
 
-        <div sx={{ display: 'flex', flexDirection: 'column' }}>
-          <span sx={{ mt: 0, mb: 2 }}>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <span style={{ marginTop: 0, marginBottom: 2 }}>
             <Themed.h1>{title}</Themed.h1>
             <Themed.h4 aria-label="price" sx={{ mt: 0, mb: 2 }}>
               {price}
