@@ -6,7 +6,6 @@ import { Link, ImageCarousel } from '@components/ui'
 import { getPrice } from '@lib/swell/storefront-data-hooks/src/utils/product'
 import { Product } from '@lib/swell/storefront-data-hooks/src/types'
 
-
 export interface ProductCardProps {
   className?: string
   product: Product
@@ -27,11 +26,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
   imgSizes,
   imgLayout = 'responsive',
 }) => {
-  const handle = (product).slug
-  const price = getPrice(
-    product.price,
-    product.currency ?? 'USD'
-  )
+  const handle = product.slug
+  const price = getPrice(product.price, product.currency ?? 'USD')
 
   return (
     <Card
@@ -54,16 +50,18 @@ const ProductCard: React.FC<ProductCardProps> = ({
             sizes={imgSizes}
             alt={product.name}
             images={
-              product.images?.length ? product.images : [{
-                src: `https://via.placeholder.com/${imgWidth}x${imgHeight}`,
-              }]
+              product.images?.length
+                ? product.images
+                : [
+                    {
+                      src: `https://via.placeholder.com/${imgWidth}x${imgHeight}`,
+                    },
+                  ]
             }
           />
         </div>
         <div style={{ textAlign: 'center' }}>
-          <Themed.h2 sx={{ mt: 4, mb: 0, fontSize: 14 }}>
-            {product.name}
-          </Themed.h2>
+          <h2 sx={{ mt: 4, mb: 0, fontSize: 14 }}>{product.name}</h2>
           <Text sx={{ fontSize: 12, mb: 2 }}>{price}</Text>
         </div>
       </Link>

@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-/** @jsxFrag jsx */
 import React, { FC, useState, useEffect } from 'react'
 import { NextSeo } from 'next-seo'
 import { Themed } from '@theme-ui/mdx'

@@ -12,7 +12,6 @@ import '../blocks/ProductGrid/ProductGrid.builder'
 import '../blocks/CollectionView/CollectionView.builder'
 import '../blocks/ProductView/ProductView.builder'
 
-
 Builder.register('insertMenu', {
   name: 'Swell Collection Components',
   items: [
@@ -27,7 +26,7 @@ Builder.register('insertMenu', {
   items: [
     { name: 'ProductView' },
     { name: 'ProductBox' },
-    { name: 'ProductGrid' }
+    { name: 'ProductGrid' },
   ],
 })
 

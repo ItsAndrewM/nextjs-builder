@@ -28,7 +28,6 @@ export async function getStaticProps({
   const page = await resolveSwellContent('page', {
     urlPath: '/' + (params?.path?.join('/') || ''),
   })
-
   return {
     props: {
       page,
@@ -75,7 +74,7 @@ export default function Path({
   }
 
   const { title, description, image } = page?.data! || {}
-  Builder.isStatic = true;
+  Builder.isStatic = true
   return (
     <div>
       {title && (
@@ -105,7 +104,7 @@ export default function Path({
         data={{ theme }}
         renderLink={(props: any) => {
           // nextjs link doesn't handle hash links well if it's on the same page (starts with #)
-          if (props.target === '_blank' || props.href?.startsWith('#') ) {
+          if (props.target === '_blank' || props.href?.startsWith('#')) {
             return <Themed.a {...props} />
           }
           return <Themed.a {...props} as={Link} />
